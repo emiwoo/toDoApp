@@ -1,0 +1,39 @@
+.mainContainer {
+    margin: 15px 25px;
+}
+
+.headerBackgroundImage {
+    background-image: url('../assets/bg-mobile-light.jpg');
+    width: 375px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+:global(body.dark) .headerBackgroundImage {
+    background-image: url('../assets/bg-mobile-dark.jpg');
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerText {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+}
+
+.headerMoonImage {
+    background-image: url('../assets/icon-moon.svg');
+    width: 26px;
+    height: 26px;
+}
+
+:global(body.dark) .headerMoonImage {
+    background-image: url('../assets/icon-sun.svg');
+}

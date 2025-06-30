@@ -1,0 +1,45 @@
+.formContainer {
+    background-color: white;
+    padding: 3.5px 25px;
+    display: flex;
+    align-items: center;
+    gap: 17.5px;
+    border-radius: 7.5px;
+}
+
+:global(body.dark) .formContainer {
+    background-color: hsl(237, 14%, 26%);
+}
+
+:global(body.dark) .formText {
+    background-color: hsl(237, 14%, 26%);
+    color: hsl(234, 39%, 85%);
+}
+
+:global(body.dark) .formText::placeholder {
+    color: hsl(235, 5%, 45%);
+}
+
+:global(body.dark) .formCircle {
+    border-color: hsl(233, 14%, 35%);
+}
+
+.formText {
+    color: hsl(235, 19%, 35%);
+    font-weight: 400;
+    font-family: josefins;
+    border: none;
+    margin: 15px 0;
+    outline: none;
+}
+
+.formText::placeholder {
+    color: hsl(236, 33%, 92%);
+}
+
+.formCircle {
+    border-radius: 50%;
+    border: solid 1.5px hsl(233, 11%, 84%);
+    width: 20px;
+    height: 20px;
+}

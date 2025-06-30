@@ -1,0 +1,62 @@
+.taskContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 10px 30px 15px rgba(0,0,0,0.1);
+    border-radius: 7.5px;
+    margin-top: 25px;
+}
+
+.counterAndClear {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 5px 25px;
+    font-size: 14px;
+    color: hsl(236, 9%, 61%);
+}
+
+.filterContainer {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    color: hsl(234, 11%, 52%);
+    border-radius: 7.5px;
+    box-shadow: 0 10px 30px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    padding: 2.5px 0;
+}
+
+.filterContainer p:hover, .clearCompleted:hover {
+    color: hsl(237, 14%, 26%);
+}
+
+.filterContainer p, .clearCompleted {
+    transition: color 0.25s ease;
+}
+
+:global(body.dark) .taskContainer {
+    background-color: hsl(237, 14%, 26%);
+}
+
+:global(body.dark) .filterContainer {
+    background-color: hsl(237, 14%, 26%);
+}
+
+:global(body.dark) .counterAndClear {
+    color: hsl(235, 5%, 45%);
+}
+
+:global(body.dark) .clearCompleted:hover {
+    color: hsl(236, 33%, 92%);
+}
+
+:global(body.dark) .filterContainer > p:hover {
+    color: hsl(236, 33%, 92%);
+}
+
+.currentFilter {
+    color: rgb(78, 78, 221);
+}

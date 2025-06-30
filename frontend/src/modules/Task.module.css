@@ -1,0 +1,59 @@
+.taskCircle {
+    border-radius: 50%;
+    border: solid 1.5px hsl(233, 11%, 84%);
+    width: 20px;
+    height: 20px;
+}
+
+.taskCircleCompleted {
+    background-image: url('../assets/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(233, 11%, 84%);
+}
+
+.taskHolder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17.5px 25px;
+    border-bottom: solid 1px hsl(236, 33%, 92%);
+}
+
+.taskHolder:hover .taskXImage {
+    opacity: 1;
+}
+
+.taskHolder:hover .taskText {
+    scale: 1.1;
+}
+
+:global(body.dark) .taskText {
+    color: hsl(234, 39%, 85%);
+}
+
+:global(body.dark) .taskCircle {
+    border-color: hsl(233, 14%, 35%);
+}
+
+:global(body.dark) .taskHolder {
+    border-bottom-color: hsl(233, 14%, 35%);
+}
+
+.taskText {
+    color: hsl(235, 19%, 35%);
+    margin: 0;
+    transition: scale 0.25s ease;
+}
+
+.leftSideContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.taskXImage {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    height: 18px;
+}

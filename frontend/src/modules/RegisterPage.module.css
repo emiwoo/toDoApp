@@ -1,0 +1,10 @@
+.holder {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

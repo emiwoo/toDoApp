@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: josefins;
+    background-color: hsl(0, 0%, 98%);
+}
+
+body.dark {
+    background-color: hsl(235, 16%, 16%);
+}
+
+@font-face {
+    font-family: 'josefins';
+    src: url('./assets/JosefinSans-VariableFont_wght.ttf/');
+}
