@@ -11,7 +11,7 @@ function App() {
     const navigate = useNavigate();
 
     async function verifyaccess() {
-        const response = await fetch('http://localhost:3000/api/verifyaccess', {
+        const response = await fetch('https://localhost:3000/api/verifyaccess', {
             credentials: 'include'
         });
         const access = await response.text();
@@ -24,7 +24,7 @@ function App() {
     }
 
     function logOut() {
-        fetch('http://localhost:3000/api/logout', {
+        fetch('https://localhost:3000/api/logout', {
             credentials: 'include'
         });
         setLoading(true);

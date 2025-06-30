@@ -15,7 +15,7 @@ const pool = new Pool ({
 });
 
 const server = http.createServer((req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.setHeader('Access-Control-Allow-Origin', 'https://localhost:5173');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -71,7 +71,7 @@ const server = http.createServer((req, res) => {
 
 function logOut(res) {
     console.log('deleted cookie yet?');
-    res.writeHead(200, { 'Set-Cookie': 'token=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax' });
+    res.writeHead(200, { 'Set-Cookie': 'token=; Max-Age=0; Path=/; HttpOnly; SameSite=None; Secure' });
     res.end();
 }
 
@@ -96,7 +96,7 @@ function createJWT(id, res) {
         { expiresIn: '1h' }
     );
     console.log(`token created, token is : ${token}`);
-    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; SameSite=Lax; Max-Age=3600; Path=/`);
+    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; SameSite=None; Secure; Max-Age=3600; Path=/`);
 }
 
 function verifyJWTandFindID(req) {

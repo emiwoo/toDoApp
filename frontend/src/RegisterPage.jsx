@@ -21,7 +21,7 @@ function RegisterPage() {
             password: password
         };
 
-        await fetch('http://localhost:3000/api/register', {
+        await fetch('https://localhost:3000/api/register', {
             method: 'POST',
             headers: { 'Content-Type': 'appliction/json' },
             body: JSON.stringify(userAndPass)
