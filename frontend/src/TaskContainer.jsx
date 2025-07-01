@@ -8,7 +8,7 @@ function TaskContainer({task}) {
     const [loadedTasks, setLoadedTasks] = useState([]);
 
     async function sendTaskToDatabase(task) {
-        const response = await fetch('http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/sendtasktodatabase', {
+        const response = await fetch('https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/sendtasktodatabase', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({name: task}),
@@ -19,7 +19,7 @@ function TaskContainer({task}) {
     }
 
     async function loadTasks(filter) {
-        const response = await fetch(`http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/loadtasks/${filter}`, {
+        const response = await fetch(`https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/loadtasks/${filter}`, {
             credentials: 'include'
         });
         const body = await response.json();
@@ -27,7 +27,7 @@ function TaskContainer({task}) {
     }
 
     async function deleteTask(id) {
-        await fetch(`http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/deletetask/${id}`, {
+        await fetch(`https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/deletetask/${id}`, {
             method: 'DELETE',
             credentials: 'include'
         });
@@ -35,14 +35,14 @@ function TaskContainer({task}) {
     }
 
     function toggleTaskStatus(id) {
-        fetch(`http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/toggleTaskStatus/${id}`, {
+        fetch(`https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/toggleTaskStatus/${id}`, {
             method: 'PUT',
             credentials: 'include'
         });
     }
 
     async function clearCompleted() {
-        await fetch('http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/clearcompleted', { 
+        await fetch('https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/clearcompleted', { 
             method: 'DELETE',
             credentials: 'include'
         });

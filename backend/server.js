@@ -7,11 +7,14 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const pool = new Pool ({
-    host: 'localhost',
+    host: 'taskdb.cl88msmsqwid.us-east-2.rds.amazonaws.com',
     port: 5432,
-    user: 'p',
-    password: '',
-    database: 'task_db'
+    user: 'postgres',
+    password: 'Sky3ocean421',
+    database: 'taskdb',
+    ssl: {
+        rejectUnauthorized: false // needed for AWS SSL
+    }
 });
 
 const server = http.createServer((req, res) => {

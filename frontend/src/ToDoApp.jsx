@@ -11,7 +11,7 @@ function App() {
     const navigate = useNavigate();
 
     async function verifyaccess() {
-        const response = await fetch('http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/verifyaccess', {
+        const response = await fetch('https://ec2-3-147-69-199.us-east-2.compute.amazonaws.com//api/verifyaccess', {
             credentials: 'include'
         });
         const access = await response.text();
@@ -24,7 +24,7 @@ function App() {
     }
 
     function logOut() {
-        fetch('http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/logout', {
+        fetch('https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/logout', {
             credentials: 'include'
         });
         setLoading(true);

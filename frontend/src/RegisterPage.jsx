@@ -21,7 +21,7 @@ function RegisterPage() {
             password: password
         };
 
-        await fetch('http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/register', {
+        await fetch('https://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/register', {
             method: 'POST',
             headers: { 'Content-Type': 'appliction/json' },
             body: JSON.stringify(userAndPass)
