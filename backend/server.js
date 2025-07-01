@@ -15,7 +15,7 @@ const pool = new Pool ({
 });
 
 const server = http.createServer((req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'd3sgai7g6vflkn.cloudfront.net');
+    res.setHeader('Access-Control-Allow-Origin', 'http://d3sgai7g6vflkn.cloudfront.net');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
