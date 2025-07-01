@@ -21,7 +21,7 @@ function LoginPage() {
             password: password
         };
 
-        const valid = await fetch('http://localhost:3000/api/login', {
+        const valid = await fetch('http://ec2-3-17-110-48.us-east-2.compute.amazonaws.com/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userAndPass)
